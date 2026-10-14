@@ -3,247 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ONE WORLD | Everything Starts Here</title>
-<meta name="description" content="ONE WORLD brings search, videos, social media, news, shopping and AI together in one free internet homepage.">
-<meta name="robots" content="index,follow">
-<meta name="theme-color" content="#091326">
+<meta name="theme-color" content="#080f20">
+<meta name="description" content="NEXUS is an independent digital discovery and community platform prototype. Search, watch, discover and connect in one place.">
+<title>NEXUS | Discover. Watch. Connect.</title>
 <style>
+:root{--bg:#080f20;--panel:#14243b;--line:#30445e;--cyan:#6be6f0;--gold:#f2c982;--muted:#b7c8da}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#091326;color:white;font-family:Arial,sans-serif;line-height:1.6}
+body{margin:0;background:var(--bg);color:#fff;font:16px/1.6 Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}
-header{background:#07101f;border-bottom:1px solid #354760;position:sticky;top:0;z-index:10}
-nav{max-width:1200px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.logo{font-size:25px;font-weight:900;letter-spacing:1px}
-.logo span{color:#59dce8}
-nav .links{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;font-weight:bold}
-nav a:hover{color:#59dce8}
-.hero{background:linear-gradient(#071326c9,#071326e8),url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85') center/cover;text-align:center;padding:95px 18px}
-.hero small{color:#69e3f1;letter-spacing:3px;font-weight:bold}
-h1{font-size:clamp(43px,7vw,80px);line-height:1.1;margin:20px 0}
-h1 span{color:#65dff1}
-.hero p{max-width:740px;margin:0 auto 30px;font-size:18px;color:#e1eaf5}
-.search{max-width:820px;margin:auto;background:#172741ee;border:1px solid #61728b;border-radius:15px;padding:17px}
-.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.tabs button{border:1px solid #526580;background:#223755;color:white;padding:10px 15px;border-radius:7px;cursor:pointer;font-weight:bold}
-.tabs button.active{background:#327af0}
-.search form{display:flex;gap:10px}
-.search input{flex:1;min-width:0;padding:16px;font-size:17px;border:0;border-radius:8px}
-.search form button,.btn{background:#327af0;color:white;border:0;border-radius:8px;padding:15px 22px;font-weight:bold;cursor:pointer}
-.note{font-size:12px;color:#b8c9df;margin-top:12px}
-section.content{max-width:1200px;margin:auto;padding:65px 20px}
-.heading{text-align:center;margin-bottom:35px}
-.heading small{color:#65dff1;letter-spacing:2px;font-weight:bold}
-.heading h2{font-size:clamp(30px,4vw,42px);margin:10px 0}
-.heading p{color:#b9c8db}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.card{background:#14243d;border:1px solid #354760;border-radius:13px;overflow:hidden;display:flex;flex-direction:column}
-.card img{width:100%;height:205px;object-fit:cover}
-.card div{padding:20px;display:flex;flex-direction:column;flex:1}
-.card h3{font-size:23px;margin:0 0 8px}
-.card p{color:#bfccdd;font-size:14px;flex:1}
-.card a{display:inline-block;align-self:flex-start;background:#28599e;padding:11px 16px;border-radius:7px;font-size:13px;font-weight:bold}
-.card a:hover,.btn:hover{background:#438bfa}
-.quick{background:#101e33;padding:60px 20px}
-.quick-inner{max-width:1200px;margin:auto}
-.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
-.quick-grid a{background:#1b304c;border:1px solid #405474;border-radius:10px;padding:20px;text-align:center;font-weight:bold}
-.quick-grid a:hover{background:#30547e}
-.quick-grid span{display:block;font-size:28px;margin-bottom:5px}
-.ai{background:linear-gradient(110deg,#184c85,#432b77);text-align:center;padding:65px 20px}
-.ai h2{font-size:38px;margin:0 0 15px}
-.ai p{max-width:750px;margin:0 auto 25px}
-.ai a{display:inline-block;background:#f3cb83;color:#172033;border-radius:8px;padding:13px 22px;font-weight:bold}
-.legal{padding:35px 20px;background:#070d18;color:#b5c1d1;font-size:13px}
-.legal div{max-width:1100px;margin:auto}
-.legal h3{color:#f3cb83}
-footer{text-align:center;background:#040810;padding:30px 15px;color:#afbed1;font-size:13px}
-footer strong{font-size:23px;color:#69e3f1}
-@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:550px){nav{justify-content:center}.hero{padding:65px 14px}.search form{flex-direction:column}.grid{grid-template-columns:1fr}.card img{height:210px}.quick-grid a{padding:15px 8px}}
-</style>
-</head>
-<body>
-
-<header>
-<nav>
-<a class="logo" href="#home">ONE<span>WORLD</span></a>
-<div class="links">
-<a href="#home">HOME</a>
-<a href="#discover">DISCOVER</a>
-<a href="#quick">QUICK LINKS</a>
-<a href="#ai">AI</a>
-</div>
-</nav>
-</header>
-
-<main>
-
-<div class="hero" id="home">
-<small>YOUR GATEWAY TO THE INTERNET</small>
-<h1>EVERYTHING.<br><span>ONE WORLD.</span></h1>
-<p>Search the web. Watch videos. Connect with people. Discover news. Shop online. Explore artificial intelligence. All from one beautiful homepage.</p>
-
-<div class="search">
-<div class="tabs">
-<button class="active" data-search="web" type="button">WEB</button>
-<button data-search="videos" type="button">VIDEOS</button>
-<button data-search="news" type="button">NEWS</button>
-<button data-search="shopping" type="button">SHOPPING</button>
-<button data-search="images" type="button">IMAGES</button>
-</div>
-<form id="searchForm">
-<input id="query" type="search" placeholder="Search anything in the world..." aria-label="Search the internet" required>
-<button type="submit">SEARCH</button>
-</form>
-<div class="note">Search results open through Google or YouTube. No ONE WORLD registration required.</div>
-</div>
-</div>
-
-<section class="content" id="discover">
-<div class="heading">
-<small>DISCOVER THE POSSIBILITIES</small>
-<h2>Explore the Digital World</h2>
-<p>Six powerful categories. One simple destination.</p>
-</div>
-
-<div class="grid">
-
-<article class="card">
-<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=85" alt="Planet Earth" loading="lazy">
-<div>
-<h3>🌐 Web Search</h3>
-<p>Find websites, information, businesses, answers and resources from around the world.</p>
-<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">SEARCH THE WEB →</a>
-</div>
-</article>
-
-<article class="card">
-<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=85" alt="Professional camera" loading="lazy">
-<div>
-<h3>▶ Videos</h3>
-<p>Discover entertainment, music, tutorials, documentaries and popular videos.</p>
-<a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">WATCH VIDEOS →</a>
-</div>
-</article>
-
-<article class="card">
-<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85" alt="Friends together" loading="lazy">
-<div>
-<h3>👥 Social & Community</h3>
-<p>Explore social networks, groups, communities, conversations and connections.</p>
-<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">CONNECT →</a>
-</div>
-</article>
-
-<article class="card">
-<img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=85" alt="News and newspapers" loading="lazy">
-<div>
-<h3>📰 World News</h3>
-<p>Find breaking news, international headlines, business, technology and current events.</p>
-<a href="https://news.google.com/" target="_blank" rel="noopener noreferrer">READ NEWS →</a>
-</div>
-</article>
-
-<article class="card">
-<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Shopping and fashion" loading="lazy">
-<div>
-<h3>🛍 Shopping</h3>
-<p>Discover products, compare shopping options and browse popular marketplaces.</p>
-<a href="https://shopping.google.com/" target="_blank" rel="noopener noreferrer">START SHOPPING →</a>
-</div>
-</article>
-
-<article class="card">
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85" alt="Artificial intelligence" loading="lazy">
-<div>
-<h3>🤖 Artificial Intelligence</h3>
-<p>Explore AI tools for writing, learning, research, creativity and problem-solving.</p>
-<a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">EXPLORE AI →</a>
-</div>
-</article>
-
-</div>
-</section>
-
-<div class="quick" id="quick">
-<div class="quick-inner">
-<div class="heading">
-<small>ONE CLICK AWAY</small>
-<h2>Popular World Destinations</h2>
-<p>Convenient links to useful websites.</p>
-</div>
-
-<div class="quick-grid">
-<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><span>🔎</span>Google</a>
-<a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><span>▶️</span>YouTube</a>
-<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span>👥</span>Facebook</a>
-<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span>📸</span>Instagram</a>
-<a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer"><span>📚</span>Wikipedia</a>
-<a href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer"><span>📦</span>Amazon</a>
-<a href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer"><span>💬</span>Reddit</a>
-<a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><span>💼</span>LinkedIn</a>
-<a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"><span>📍</span>Maps</a>
-<a href="https://www.booking.com/" target="_blank" rel="noopener noreferrer"><span>✈️</span>Travel</a>
-<a href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer"><span>🌍</span>BBC News</a>
-<a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer"><span>✨</span>ChatGPT</a>
-</div>
-</div>
-</div>
-
-<div class="ai" id="ai">
-<h2>The Future Is Here</h2>
-<p>Explore artificial intelligence and discover new ways to create, learn, research and solve problems.</p>
-<a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">EXPLORE CHATGPT →</a>
-</div>
-
-</main>
-
-<div class="legal">
-<div>
-<h3>IMPORTANT INFORMATION & LEGAL DISCLAIMERS</h3>
-<p><strong>Independent Website:</strong> ONE WORLD is an independent internet discovery portal. It is not affiliated with, sponsored by or endorsed by Google, YouTube, Facebook, Meta, Amazon, OpenAI or any other listed provider.</p>
-<p><strong>External Services:</strong> Search, videos, social networking, news, shopping and AI are supplied by independent third-party websites. ONE WORLD does not operate its own search engine, video hosting service, social network or AI system.</p>
-<p><strong>Privacy:</strong> This website does not include its own account system or visitor-tracking script. GitHub Pages and third-party providers may process technical information according to their respective privacy policies. Searches are sent to the selected external search provider.</p>
-<p><strong>Accuracy:</strong> Information, availability, prices and services may change. Verify important details directly with the provider.</p>
-<p><strong>Trademarks:</strong> Company names and trademarks belong to their respective owners. Their inclusion does not imply endorsement.</p>
-<p><strong>Third-Party Links:</strong> ONE WORLD is not responsible for the content, security, privacy practices or transactions of external websites.</p>
-<p><strong>Free Access:</strong> Browsing ONE WORLD is free. Third-party websites may require registration, subscriptions or payment.</p>
-<p><strong>Images:</strong> Illustrative photographs are delivered by third-party image hosts and require an internet connection.</p>
-</div>
-</div>
-
-<footer>
-<strong>ONE WORLD</strong>
-<p>SEARCH • WATCH • CONNECT • DISCOVER</p>
-<p>Everything Starts Here.</p>
-<p>&copy; <span id="year"></span> ONE WORLD. All Rights Reserved.</p>
-<p><a href="#home">BACK TO TOP ↑</a></p>
-</footer>
-
-<script>
-let mode="web";
-document.querySelectorAll("[data-search]").forEach(button=>{
- button.onclick=()=>{
-  document.querySelectorAll("[data-search]").forEach(b=>b.classList.remove("active"));
-  button.classList.add("active");
-  mode=button.dataset.search;
-  document.getElementById("query").placeholder="Search "+mode+"...";
- };
-});
-document.getElementById("searchForm").onsubmit=e=>{
- e.preventDefault();
- const q=encodeURIComponent(document.getElementById("query").value.trim());
- if(!q)return;
- let url="https://www.google.com/search?q="+q;
- if(mode==="videos")url="https://www.youtube.com/results?search_query="+q;
- if(mode==="news")url="https://www.google.com/search?tbm=nws&q="+q;
- if(mode==="shopping")url="https://www.google.com/search?tbm=shop&q="+q;
- if(mode==="images")url="https://www.google.com/search?tbm=isch&q="+q;
- window.location.href=url;
-};
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
-
-</body>
-</html>
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+header{background:#091427;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}
+nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.logo{font-size:25px;font-weight:900;letter-spacing:2px;color:var(--cyan)}
+nav .links{display:flex;gap:17px;flex-wrap:wrap;font-size:13px;font-weight:bold}
+nav a:hover{color:var(--cyan)}
+.hero{min-height:480px;background:linear-gradient(100deg,#071326ed,#0b1e39aa),url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85') center/cover;display:grid;place-items:center;text-align:center;padding:65px 18px}
+.hero-inner{max-width:900px}
+.eyebrow{color:var(--cyan);letter-spacing:3px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(45px,7vw,82px);line-height:1.1;margin:15px 0}
+h1 span{color:var(--cyan)}
+.hero p{color:#e3ecf8;font-size:18px;max-width:730px;margin:0 auto 26px}
+.searchbox{display:flex;gap:10px;max-width:740px;margin:auto;background:#152b48;padding:12px;border-radius:13px;border:1px solid #64809d}
+.searchbox input{flex:1;min-width:0;border:0;border-radius:7px;padding:16px;background:white;color:#111;font-size:17px}
+.btn,.searchbox button{background:#3486ee;color:white;border:0;border-radius:8px;padding:13px 20px;font-weight:bold}
+.btn:hover,.searchbox button:hover{background:#60a5fa}
+.wrap{max-width:1200px;margin:auto;padding:65px 20px}
+.heading{text-align:center;margin-bottom:32px}
+.heading small{color:var(--cyan);letter-spacing:2px;font-weight:bold}
+.heading h2{font-size:clamp(29px,4vw,43px);margin:8px 0}
+.heading p,.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card-body{padding:20px}
+.card h3{margin:0 0 8px;font-size:23px}
+.card p{color:var(--muted);font-size:14px}
+.card a{display:inline-block;background:#27599c;padding:10px 15px;border-radius:7px;font-size:13px;font-weight:bold}
+.card a:hover{background:#3486ee}
+.alt{background:#0e1b30}
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.tool{background:#182c47;border:1px solid var(--line);padding:23px;border-radius:12px;text-align:center}
+.tool .symbol{font-size:32px}
+.tool h3{margin:10px 0 5px}
+.tool p{color:var(--muted);font-size:14px}
+.section-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.section-actions button{background:#203b5c;color:white;border:1px solid #527294;padding:10px 17px;border-radius:8px}
+.section-actions button.active{background:#3486ee}
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.video{background:#14243b;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.video video{display:block;width:100%;height:205px;background:black;object-fit:contain}
+.video-body{padding:17px}
+.video h3{font-size:18px;margin:0 0 7px;overflow-wrap:anywhere}
+.video p{font-size:13px;color:var(--muted);margin:0}
+.community-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:20px;align-items:start}
+.panel{padding:22px}
+.panel h3{margin:0 0 15px}
+.field{display:block;width:100%;padding:13px;margin:10px 0;border-radius:8px;border:1px solid #708099;background:white;color:#111}
+textarea.field{min-height:110px;resize:vertical}
+.post{background:#1a2e49;border:1px solid #405575;padding:18px;border-radius:12px;margin-bottom:14px;overflow-wrap:anywhere}
+.post h4{margin:0 0 7px;color:var(--cyan)}
+.post p{white-space:pre-wrap;margin:8px 0 13px}
+.post button{background:#294d79;border:0;color:white;padding:8px 12px;border-radius:7px;margin-right:8px}
+.comments{margin-top:12px;border-top:1px solid #405575;padding-top:10px}
+.comment{font-size:13px;color:#dce8f6;padding:7px 0;border-bottom:1px solid #344862}
+.results{max-width:900px;margin:25px auto 0;text-align:left}
+.result{background:#1b304d;padding:16px;margin:10px 0;border-radius:10px;border:1px solid #405b7c}
+.result strong{color:var(--cyan)}
+.result p{margin:5px 0;color:#d2deed;font-size:14px}
+.result a{color:var(--gold);text-decoration:underline}
+.hidden{display:none!important}
+.notice{background:#192c45;border-left:3px solid var(--gold);padding:14px;border-radius:5px;color:#d7e2ef;font-size:13px;margin:15px 0}
+.legal{background:#060c18;border-top:1px solid var(--line);padding:35px 20px;color:#b5c5d7;font-size:13px}
+.legal-inner{max-width:1100px;margin:auto}
+.legal h3{color:var(--gold)}
+footer{text-align:center;background:#040913;padding:25px;color:var(--muted);font-size:13px}
+footer strong{color:var(--cyan);font-size:
